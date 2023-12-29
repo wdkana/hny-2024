@@ -11,7 +11,7 @@ function App() {
     await loadFireworksPreset(preset);
   };
 
-  const countDown = () => {
+  const timeLeft = () => {
     const newYearDate = new Date("January 1, 2024 00:00:00").getTime();
     const now = new Date().getTime();
     const difference = newYearDate - now;
@@ -35,7 +35,7 @@ function App() {
         </span>
         <div className="text-white font-bold text-2xl z-50 ">
           <Countdown
-            date={Date.now() + countDown()}
+            date={Date.now() + timeLeft()}
             onComplete={() =>
               setNewYearMessage([
                 "Selamat",
